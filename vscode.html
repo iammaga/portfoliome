@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./img/portfolio.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="overflow-y-hidden select-none pb-0 md:pb-8 xl:pb-14 rounded-2xl">
+    <div
+      class="container bg-black border-0 border-black rounded-t-3xl ml-auto mr-auto mt-0 md:mt-8 md:my-4 h-full md:h-[97%] sm:w-full md:w-5/6 lg:h-[97%] xl:h-[93%] lg:border lg:border-4 lg:border-b-0 lg:mb-0 sm:rounded-b-3xl rounded-b-3xl"
+    >
+      <div>
+        <div
+          id="bg-img"
+          class="hidden rounded-t-2xl block sm:rounded-b-3xl sm:h-[99%] rounded-b-3xl"
+        >
+          <div
+            class="text-white border-t-8 border-l-8 border-r-8 border-black flex justify-between items-start rounded-t-2xl bg-[#212836]"
+          >
+            <div class="flex items-center justify-center">
+              <div class="phone-button">
+                <i class="fa-solid fa-signal text-xs ml-2 mt-2"></i>
+                <i class="fa-solid fa-signal text-xs ml-2 mt-2"></i>
+                <i class="fa-solid fa-wifi text-xs ml-2 mt-2"></i>
+              </div>
+              <div class="pc-button">
+                <a href="./">
+                  <i
+                    class="fa-solid fa-circle-xmark text-red-600 ml-2 mt-2"
+                  ></i>
+                </a>
+                <i class="fa-solid fa-circle text-yellow-400 ml-1 mt-2"></i>
+                <i class="fa-solid fa-circle text-lime-400 ml-1 mt-2"></i>
+              </div>
+            </div>
+            <div class="w-36 lg:w-52">
+              <div
+                class="flex flex-col-reverse text-center bg-black text-black border-b-[24px] border-black rounded-b-2xl border-t-8 border-l-8 border-r-8 border-black"
+              ></div>
+            </div>
+            <div class="flex items-center mt-1">
+              <i class="fa-solid fa-battery-full text-xl"></i>
+              <h1 id="timeNow" class="text-end ml-2 mr-2 font-bold">date</h1>
+            </div>
+          </div>
+          <div id="top-laptop"></div>
+          <!-- <div id="vscode"
+          class="bg-[#1B212C] text-white border-t-8 border-l-8 border-r-8 border-black flex justify-between">
+          <div>
+            <i class="fa-solid fa-circle-xmark text-red-600 ml-2 mt-2"></i>
+            <i class="fa-solid fa-circle text-yellow-400 ml-1 mt-2"></i>
+            <i class="fa-solid fa-circle text-lime-400 ml-1 mt-2"></i>
+          </div>
+          <div>
+            <div
+              class="flex flex-col-reverse text-center bg-black text-black border-b-[24px] border-black rounded-b-2xl mb-2">
+            </div>
+            <h1 class="text-center mb-2">Portfolio - Visual Studio Code</h1>
+          </div>
+          <div class="flex items-start mt-1">
+            <i class="fa-solid fa-battery-full text-xl"></i>
+            <h1 id="timeNow" class="text-end ml-2 mr-2">date</h1>
+          </div>
+        </div> -->
+          <div
+            class="border-l-8 border-r-8 border-black min-h-[96%] sm:rounded-b-3xl rounded-b-3xl"
+          >
+            <div
+              class="flex h-[94vh] w-full bg-[#212836] rounded-b-2xl md:h-[88vh] lg:h-[88vh] xl:h-[81vh]"
+            >
+              <a href="./">
+                <i
+                  id="back"
+                  class="fa-solid fa-arrow-left text-white ml-2 mt-2"
+                ></i>
+              </a>
+              <div
+                id="options"
+                class="w-100 block w-12 h-100 h-auto border-r-2 border-[#212836] mr-4 mt-4"
+              >
+                <a onclick="openFolders()">
+                  <i class="fa-solid fa-copy text-white ml-4 text-3xl"></i>
+                </a>
+                <a href="./user.html">
+                  <i class="fa-solid fa-user mt-4 text-white ml-4 text-3xl"></i>
+                </a>
+                <a href="https://github.com/iammaga">
+                  <i
+                    class="fa-brands fa-github mt-4 text-white ml-4 text-3xl"
+                  ></i>
+                </a>
+                <a href="https://t.me/Magaa11111">
+                  <i
+                    class="fa-solid fa-paper-plane mt-4 text-white ml-4 text-2xl"
+                  ></i>
+                </a>
+              </div>
+              <div class="block md:flex w-full overflow-y-auto">
+                <div
+                  id="folders"
+                  class="text-white w-full lg:w-1/5 bg-[#1B212C] pl-4 hidden"
+                >
+                  Навыки
+                  <!-- <i class="fa-solid fa-chevron-down"></i> -->
+                  <div class="bg-[#1B212C] none">
+                    <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                    <!-- <i class="fa-solid fa-browser"></i> -->
+                    <div onclick="openFrontendFolder()">
+                      <span>
+                        <i class="fa-solid fa-chevron-down mt-2"></i>
+                        <i class="fa-solid fa-folder mt-2"></i> Front-end
+                      </span>
+                    </div>
+                    <div id="frontend" class="ml-8 none">
+                      <p>
+                        <i class="fa-brands fa-html5"></i>
+                        HTML
+                      </p>
+                      <div class="none" onclick="openCssFolder()">
+                        <p>
+                          <i class="fa-solid fa-chevron-down mt-2"></i>
+                          <i class="fa-brands fa-css3-alt"></i>
+                          CSS
+                        </p>
+                      </div>
+                      <div id="css" class="ml-8">
+                        <p class="flex items-center">
+                          <img
+                            src="./img/tailwindcss.svg"
+                            alt=""
+                            width="18px"
+                            class="mr-1"
+                          />
+                          Tailwindcss
+                        </p>
+                        <p>
+                          <i class="fa-brands fa-bootstrap"></i>
+                          Bootstrap
+                        </p>
+                      </div>
+                      <div class="none" onclick="openJsFolder()">
+                        <p>
+                          <i class="fa-solid fa-chevron-down mt-2"></i>
+                          <i class="fa-brands fa-js mt-2"></i>
+                          JavaScript
+                        </p>
+                      </div>
+                      <div id="js" class="ml-8">
+                        <p>
+                          <i class="fa-brands fa-react"></i>
+                          React
+                        </p>
+                        <p>
+                          <i class="fa-brands fa-vuejs"></i>
+                          Vue
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-[#1B212C] none" onclick="openBackendFolder()">
+                    <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                    <i class="fa-solid fa-chevron-down mt-2"></i>
+                    <i class="fa-solid fa-folder mt-2"></i>
+                    <!-- <i class="fa-sharp fa-solid fa-gear-code"></i> -->
+                    Back-end
+                  </div>
+                  <div id="backend" class="ml-8 none" onclick="openPhpFolder()">
+                    <div class="none">
+                      <p>
+                        <i class="fa-solid fa-chevron-down mt-2"></i>
+                        <i class="fa-brands fa-php"></i>
+                        Php
+                      </p>
+                    </div>
+                    <div id="php" class="ml-8">
+                      <p>
+                        <i class="fa-brands fa-laravel"></i>
+                        Laravel
+                      </p>
+                    </div>
+                  </div>
+                  <div class="bg-[#1B212C] none" onclick="openDatabaseFolder()">
+                    <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                    <i class="fa-solid fa-chevron-down mt-2"></i>
+                    <i class="fa-solid fa-folder mt-2"></i>
+                    <!-- <i class="fa-solid fa-database"></i> -->
+                    Database
+                    <div id="database" class="ml-8">
+                      <p>
+                        <i class="fa-solid fa-database"></i>
+                        MySql
+                      </p>
+                    </div>
+                  </div>
+                  <div class="bg-[#1B212C] my-0.5 ml-4">
+                    <p class="flex items-center">
+                      <i class="fa-sharp fa-solid fa-terminal"></i>
+                      Terminal
+                    </p>
+                  </div>
+                  <div class="bg-[#1B212C] my-0.5 ml-4 flex items-center">
+                    <p class="flex items-center">
+                      <i class="fa-brands fa-node-js mr-2"></i>
+                      Node js
+                    </p>
+                  </div>
+                  <div class="bg-[#1B212C] my-0.5 ml-4 flex items-center">
+                    <p class="flex items-center">
+                      <i class="fa-brands fa-linux mr-2"></i>
+                      Linux
+                    </p>
+                  </div>
+                  <div class="bg-[#1B212C] my-0.5 ml-4 flex items-center">
+                    <p class="flex items-center">
+                      <img
+                        src="./img/docker.svg"
+                        alt=""
+                        width="24px"
+                        class="pr-2"
+                      />
+                      Docker
+                    </p>
+                  </div>
+                  <div class="bg-[#1B212C] my-0.5 ml-4 flex items-center">
+                    <p class="flex items-center">
+                      <img
+                        src="./img/composer.svg"
+                        alt=""
+                        width="24px"
+                        class="pr-2"
+                      />
+                      Composer
+                    </p>
+                  </div>
+                  <div class="bg-[#1B212C] my-0.5 ml-4 flex items-center">
+                    <p class="flex items-center">
+                      <img
+                        src="./img/npm.svg"
+                        alt=""
+                        width="24px"
+                        class="pr-2"
+                      />
+                      Npm
+                    </p>
+                  </div>
+                  <div class="bg-[#1B212C] my-0.5 ml-4 flex items-center">
+                    <p class="flex items-center">
+                      <i class="fa-brands fa-markdown mr-2"></i>
+                      README
+                    </p>
+                  </div>
+                </div>
+                <div id="data" class="rounded-2xl border-white w-auto md:w-80 bg-black py-8 px-2 mx-4 mt-8 lg:mt-0">
+                  <div class="text-xl md:text-base">
+                    <div class="flex">
+                      <p class="text-red-600 font-bold ml-2">"front-end"<p class="text-white font-bold ml-1"> => [</p></p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"html"</p><p class="text-white font-bold ml-1">,</p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"css" 
+                        <p class="text-white font-bold ml-1"> => [</p>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-16 md:ml-12">"tailwindcss"</p><p class="text-white font-bold ml-1">,</p>
+                    </div>
+                    <p class="text-sky-500 font-bold ml-16 md:ml-12">"bootstrap"</p>
+                    <p class="text-white font-bold ml-8">]</p>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"javascript" 
+                        <p class="text-white font-bold ml-1"> => [</p>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-16 md:ml-12">"react"</p><p class="text-white font-bold ml-1">,</p>
+                    </div>
+                    <p class="text-sky-500 font-bold ml-16 md:ml-12">"vue"</p>
+                    <p class="text-white font-bold ml-8">]</p>
+                    <p class="text-white font-bold ml-2">]</p>
+                  </div>
+                  <div class="text-xl md:text-base">
+                    <div class="flex">
+                      <p class="text-red-600 font-bold ml-2">"back-end"<p class="text-white font-bold ml-1"> => [</p></p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"php" 
+                        <p class="text-white font-bold ml-1"> => [</p>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-16 md:ml-12">"laravel"</p>
+                    </div>
+                    <p class="text-white font-bold ml-8">]</p>
+                    <p class="text-white font-bold ml-2">]</p>
+                  </div>
+                  <div class="text-xl md:text-base">
+                    <div class="flex">
+                      <p class="text-red-600 font-bold ml-2">"database"<p class="text-white font-bold ml-1"> => [</p></p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"mysql"</p>
+                    </div>
+                    <p class="text-white font-bold ml-2">]</p>
+                  </div>
+                  <div class="text-xl md:text-base">
+                    <div class="flex">
+                      <p class="text-red-600 font-bold ml-2">"other"<p class="text-white font-bold ml-1"> => [</p></p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"terminal"</p><p class="text-white font-bold ml-1">,</p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"linux"</p><p class="text-white font-bold ml-1">,</p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"docker"</p><p class="text-white font-bold ml-1">,</p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"composer"</p><p class="text-white font-bold ml-1">,</p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"npm"</p><p class="text-white font-bold ml-1">,</p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-sky-500 font-bold ml-8">"readme"</p>
+                    </div>
+                    <p class="text-white font-bold ml-2">]</p>
+                  </div>
+                </div>
+                <div
+                  class="block md:flex md:justify-center w-full xl:hidden h-max my-auto"
+                >
+                  <div
+                    class="flex flex-1 justify-center text-center border-2 border-[#161a21] rounded-lg my-4 md:my-2 mx-4 hover:bg-black shadow-md"
+                  >
+                    <a class="flex" href="./user.html"
+                      ><div class="flex items-center w-full justify-center">
+                        <div class="w-full lg:w-auto flex justify-center block">
+                          <h2
+                            class="flex items-center text-left text-base font-semibold leading-tight mx-1 md:hidden lg:flex text-white"
+                          >
+                            About me
+                          </h2>
+                          <i
+                            class="fa-solid fa-user my-4 text-white mx-1 text-3xl"
+                          ></i>
+                        </div></div
+                    ></a>
+                  </div>
+                  <div
+                    class="flex flex-1 justify-center text-center border-2 border-[#161a21] rounded-lg my-4 md:my-2 mx-4 hover:bg-black shadow-md"
+                  >
+                    <a
+                      class="flex"
+                      href="https://laracasts.com/topics/alpine-js"
+                      ><div class="flex items-center w-full justify-center">
+                        <div class="w-full lg:w-auto flex justify-center block">
+                          <h2
+                            class="flex items-center text-left text-base font-semibold leading-tight mx-1 md:hidden lg:flex text-white"
+                          >
+                            Github
+                          </h2>
+                          <a href="https://github.com/iammaga">
+                            <i
+                              class="fa-brands fa-github my-4 text-white mx-1 text-3xl"
+                            ></i>
+                          </a>
+                        </div></div
+                    ></a>
+                  </div>
+                  <div
+                    class="flex flex-1 justify-center text-center border-2 border-[#161a21] rounded-lg my-4 md:my-2 mx-4 hover:bg-black shadow-md"
+                  >
+                    <a
+                      class="flex"
+                      href="https://laracasts.com/topics/alpine-js"
+                      ><div class="flex items-center w-full justify-center">
+                        <div class="w-full lg:w-auto flex justify-center block">
+                          <h2
+                            class="flex items-center text-left text-base font-semibold leading-tight mx-1 md:hidden lg:flex text-white"
+                          >
+                            Telegram
+                          </h2>
+                          <a href="https://t.me/Magaa11111">
+                            <i
+                              class="fa-solid fa-paper-plane my-4 text-white mx-1 text-3xl"
+                            ></i>
+                          </a>
+                        </div></div
+                    ></a>
+                  </div>
+                <div
+                  id="greetings"
+                  class="block h-full text-white text-md sm:text-2xl md:text-3xl text-center w-full px:0 lg:px-8 w-full"
+                >
+                  <div
+                    class="about h-full flex items-center justify-center pr-0"
+                  >
+                    <h3
+                      class="text-8xl items-center text-[#202020] uppercase tracking-[-2px] shadow-[0_20px_70px_rgba(0,0,0,0.55)] border-solid border-[#adadad]"
+                    >
+                      <h1>
+                        document<span class="text-white"
+                          >.<span class="text-[#e06c75]">write</span></span
+                        ><span class="text-[#61afef]"></span>("
+                      </h1>
+                      <div class="string sm:text-md md:text-md">
+                        <h1 class="greeting en">Hi</h1>
+                        <h1 class="greeting ru">Привет</h1>
+                        <h1 class="greeting de">Hallo</h1>
+                      </div>
+                      <h1 class="closure">");</h1>
+                    </h3>
+                    <span
+                      class="text-white text-lg font-bold mb-2 text-gray-500 px-8 hidden"
+                    >
+                      <span id="myAge"></span>
+                    </span>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="flex mt-[-75px] items-center justify-center mb-2">
+              <div id="menu" class="flex border-2 rounded-lg">
+                <a href="https://github.com/iammaga" class="flex">
+                  <div class="px-1 items-center flex my-1">
+                    <img
+                      src="./img/github-5221066.png"
+                      alt=""
+                      width="50"
+                      height="50"
+                      class="rounded-2xl"
+                    />
+                  </div>
+                </a>
+                <a href="/vscode.html" class="flex">
+                  <div class="px-1 items-center flex my-1">
+                    <img
+                      src="./img/visual-studio-code.png"
+                      alt=""
+                      width="40"
+                      height="40"
+                      class="rounded-2xl"
+                    />
+                  </div>
+                </a>
+                <a href="https://t.me/Magaa11111" class="flex">
+                  <div class="px-1 items-center flex my-1">
+                    <img
+                      src="./img/telegram1.png"
+                      alt=""
+                      width="44"
+                      height="50"
+                      class="rounded-2xl"
+                    />
+                  </div>
+                </a>
+                <a href="/terminal.html" class="flex">
+                  <div class="px-1 items-center flex my-1">
+                    <img
+                      src="./img/terminal.png"
+                      alt=""
+                      width="50"
+                      height="50"
+                      class="rounded-2xl"
+                    />
+                  </div>
+                </a>
+                <a href="" class="flex">
+                  <div class="px-1 items-center flex my-1">
+                    <img
+                      src="./img/macos_big_sur_download_folder_icon_186042.png"
+                      alt=""
+                      width="50"
+                      height="50"
+                      class="rounded-2xl"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden bg-[#5E5F63] bg-gradient-to-b from-[#5E5F63] to-gray-900 border-[#5E5F63] w-100 mx-16 h-full rounded-b-3xl md:mx-16 sm:mx-16 xl:h-14 xl:block"
+    ></div>
+    <script src="./main.js"></script>
+  </body>
+</html>
